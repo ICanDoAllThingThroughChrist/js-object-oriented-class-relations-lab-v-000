@@ -37,7 +37,7 @@ class Passenger {
     this.name = name
   store.passengers.push(this)
   }
-  //has a trips
+  //has a trips;expect(passenger.trips()).to.include(firstTrip)
   trips() {
    return store.trips.filter(
      function(trip) {
