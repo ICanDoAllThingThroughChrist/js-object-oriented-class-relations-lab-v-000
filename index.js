@@ -44,6 +44,7 @@ class Passenger {
        return trip.passengerId === this.id
       //  debugger; does not hit this debugger
      }.bind(this)
+     debugger;
    )
  }
  // trips() {
