@@ -45,7 +45,7 @@ class Passenger {
       //  debugger; does not hit this debugger
      }.bind(this)
    )
-    debugger;
+    //debugger;does not hit this debugger
  }
  // trips() {
  //    return store.trips.filter(
