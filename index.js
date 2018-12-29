@@ -51,9 +51,10 @@ class Passenger {
  //has drivers ‣
 // expect(passenger.drivers()).to.include(driver)
  drivers() {
-     return this.trips().map(function(trip) {
+     return this.trips().map(function(trip) {//call map method on this trips() object and pass in
+       //argument of cb function with trip so
        debugger;//hits this debugger and allows step f9 to read return value of next line;
-       return trip.driver()
+       return trip.driver() //so as to return a trip's driver
      })
      //debugger;//does not hit this debugger;
    }
