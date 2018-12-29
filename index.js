@@ -40,20 +40,19 @@ class Passenger {
   trips() {
    return store.trips.filter(
      function(trip) {
-        debugger;//hits this debugger && provides return value by hitting step f9
+        //debugger;//hits this debugger && provides return value by hitting step f9
        return trip.passengerId === this.id
       //  debugger; does not hit this debugger
      }.bind(this)
    )
     debugger;//does not hit this debugger
  }
- // trips() {
- //    return store.trips.filter(
- //      function(trip) {
- //        return trip.passengerId === this.id
- //      }.bind(this)
- //    )
- //  }
+ drivers() {
+     return this.trips().map(function(trip) {
+       debugger;
+       return trip.driver()
+     })
+   }
 }
 
 class Trip {
