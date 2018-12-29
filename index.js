@@ -37,6 +37,7 @@ class Passenger {
     this.name = name
   store.passengers.push(this)
   }
+  //has a trips
   trips() {
    return store.trips.filter(
      function(trip) {
@@ -47,6 +48,7 @@ class Passenger {
    )
     debugger;//does not hit this debugger
  }
+ //expect(passenger.drivers()).to.include(driver)
  drivers() {
      return this.trips().map(function(trip) {
        debugger;//hits this debugger and allows step f9 to read return value of next line;
