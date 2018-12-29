@@ -42,7 +42,7 @@ class Passenger {
      function(trip) {
         debugger;
        return trip.passengerId === this.id
-       debugger;
+      //  debugger;
      }.bind(this)
    )
  }
