@@ -23,11 +23,10 @@ class Driver {
     );
   }
   passengers() {
-    debugger;
+    // debugger;
    return this.trips().map(function(trip) {
-    debugger;
+    // debugger;
      return trip.passenger()
-     //debugger;
    })
  }
 }
