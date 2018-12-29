@@ -40,7 +40,7 @@ class Passenger {
   trips() {
    return store.trips.filter(
      function(trip) {
-        debugger;//hits this debugger
+        debugger;//hits this debugger && provides return value
        return trip.passengerId === this.id
       //  debugger; does not hit this debugger
      }.bind(this)
