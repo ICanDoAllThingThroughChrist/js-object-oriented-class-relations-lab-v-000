@@ -52,7 +52,7 @@ class Passenger {
        debugger;//hits this debugger and allows step f9 to read return value of next line;
        return trip.driver()
      })
-     debugger;
+     //debugger;//does not hit this debugger;
    }
 }
 
