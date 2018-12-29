@@ -48,7 +48,8 @@ class Passenger {
    )
     debugger;//does not hit this debugger
  }
- //expect(passenger.drivers()).to.include(driver)
+ //has drivers ‣
+// expect(passenger.drivers()).to.include(driver)
  drivers() {
      return this.trips().map(function(trip) {
        debugger;//hits this debugger and allows step f9 to read return value of next line;
