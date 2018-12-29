@@ -49,7 +49,7 @@ class Passenger {
  }
  drivers() {
      return this.trips().map(function(trip) {
-       debugger;
+       debugger;//hits this debugger and allows step f9
        return trip.driver()
      })
    }
