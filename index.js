@@ -23,9 +23,9 @@ class Driver {
     );
   }
   passengers() {
-    // debugger;
+    // debugger; hits this debugger
    return this.trips().map(function(trip) {
-    // debugger;
+    // debugger; hits this debugger
      return trip.passenger()
    })
  }
