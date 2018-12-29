@@ -23,11 +23,10 @@ class Driver {
     );
   }
   passengers() {
-    debugger;
+    // debugger; hits this debugger
    return this.trips().map(function(trip) {
-    debugger;
+    // debugger; hits this debugger
      return trip.passenger()
-     //debugger;
    })
  }
 }
@@ -38,6 +37,27 @@ class Passenger {
     this.name = name
   store.passengers.push(this)
   }
+  //has a trips;expect(passenger.trips()).to.include(firstTrip)
+  trips() {
+   return store.trips.filter(
+     function(trip) {
+        //debugger;//hits this debugger && provides return value by hitting step f9
+       return trip.passengerId === this.id
+      //  debugger; does not hit this debugger
+     }.bind(this)
+   )
+    debugger;//does not hit this debugger
+ }
+ //has drivers ‣
+// expect(passenger.drivers()).to.include(driver)
+ drivers() {
+     return this.trips().map(function(trip) {//call map method on this trips() object and pass in
+       //argument of cb function with trip so
+       debugger;//hits this debugger and allows step f9 to read return value of next line;
+       return trip.driver() //so as to return a trip's driver
+     })
+     //debugger;//does not hit this debugger;
+   }
 }
 
 class Trip {
